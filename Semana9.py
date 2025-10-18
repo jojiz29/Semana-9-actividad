@@ -46,7 +46,7 @@ try:
     with connection.cursor() as cursor:
         cursor.execute("SELECT NOW();")
         result = cursor.fetchone()[0]
-    st.sidebar.success(f"Conectado a la BD. Hora: {result}")
+    st.sidebar.success("Conectado a la base de datos correctamente ✅")
 except Exception as e:
     st.sidebar.error(f"Error de conexión: {e}")
     st.stop()
@@ -101,3 +101,4 @@ try:
         st.caption("Aún no hay operaciones registradas.")
 except Exception as e:
     st.error(f"Error al consultar historial: {e}")
+
